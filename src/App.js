@@ -1,7 +1,7 @@
 import './App.css';
 import { useReducer } from 'react';
-import NumButtons from './src/components/NumButtons';
-import OperationButtons from './src/components/OperationButtons';
+import NumButtons from './components/NumButtons';
+import OperationButtons from './components/OperationButtons';
 
 export const ACTION = {
   ADD_DIGIT: 'add-digit',
@@ -22,7 +22,7 @@ function reducer(state, {type, payload}){
         }
         return {
           ...state,
-          currOutput: `${currOutput || ''}${payload.digit}`
+          currOutput: `${currOutput || ''}${payload.digit}`,
         }
     }
 }
